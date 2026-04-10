@@ -1,0 +1,50 @@
+@import './vars.css';
+@import './reset.css';
+
+/* 修复 Vant Toast 样式：白色文字 + 主题色背景 */
+.van-toast {
+  color: #fff !important;
+  background-color: #00B578 !important;
+}
+.van-toast .van-toast__text {
+  color: #fff !important;
+}
+.van-toast .van-icon {
+  color: #fff !important;
+}
+.van-toast .van-loading__text {
+  color: #fff !important;
+}
+/* 失败 toast 用红色背景 */
+.van-toast--fail {
+  background-color: #FF4D4F !important;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 移动端+Pad自适应 */
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* 卡片通用样式 */
+.card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+}
+
+/* Pad断点 */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+}
