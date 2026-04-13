@@ -45,8 +45,8 @@ app.use((err, req, res, next) => {
 
 // 初始化数据库并启动
 initDB()
-app.listen(PORT, () => {
-  console.log(`服务器运行在 http://localhost:${PORT}`)
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`服务器运行在 http://0.0.0.0:${PORT}`)
 })
 
 module.exports = app
